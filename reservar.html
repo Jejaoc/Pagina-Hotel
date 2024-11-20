@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haga su Reserva</title>
+    <title>Haga su Reserva - Hotel JEJA</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
         header {
             background: #2d6187;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
         form {
             max-width: 600px;
@@ -59,8 +58,8 @@
             background: #155366;
         }
         .link-back {
-            text-align: center;
             display: block;
+            text-align: center;
             margin-top: 20px;
             color: #2d6187;
             text-decoration: none;
@@ -76,6 +75,7 @@
         <h1>Haga su reserva</h1>
     </header>
     <form action="procesareserva.php" method="GET">
+        <!-- Datos Personales -->
         <fieldset>
             <legend>Datos Personales</legend>
             <label for="nombre">Nombre</label>
@@ -87,16 +87,21 @@
             <label for="dni">DNI</label>
             <input type="text" id="dni" name="dni" maxlength="10" required placeholder="DNI con letra">
         </fieldset>
+        
+        <!-- Datos de la estancia -->
         <fieldset>
             <legend>Datos de su estancia</legend>
+            
             <label>Habitación</label>
-            <input type="radio" id="individual" name="habitacion" value="Individual">
+            <input type="radio" id="individual" name="habitacion" value="Individual" required>
             <label for="individual">Individual</label>
+            
             <input type="radio" id="doble" name="habitacion" value="Doble">
             <label for="doble">Doble</label>
+            
             <input type="radio" id="triple" name="habitacion" value="Triple">
             <label for="triple">Triple</label>
-
+            
             <label for="personas">Número de personas</label>
             <select id="personas" name="personas">
                 <option value="1">1</option>
@@ -104,7 +109,7 @@
                 <option value="3">3</option>
             </select>
             
-            <label for="mascotas">
+            <label>
                 <input type="checkbox" id="mascotas" name="mascotas"> Llevo mascotas
             </label>
             
@@ -114,6 +119,7 @@
             <label for="hora">Hora de llegada</label>
             <input type="time" id="hora" name="hora">
         </fieldset>
+        
         <button type="submit">Enviar</button>
         <button type="reset">Reiniciar</button>
         <a href="index.html" class="link-back">Volver</a>
