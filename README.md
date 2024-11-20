@@ -84,3 +84,127 @@
     </footer>
 </body>
 </html>
+git checkout
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haga su Reserva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #2d6187;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        button {
+            background: #1b4d66;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #155366;
+        }
+        .link-back {
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+            color: #2d6187;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link-back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Haga su reserva</h1>
+    </header>
+    <form action="procesareserva.php" method="GET">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" maxlength="100" required autofocus>
+            
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" maxlength="100" required>
+            
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" maxlength="10" required placeholder="DNI con letra">
+        </fieldset>
+        <fieldset>
+            <legend>Datos de su estancia</legend>
+            <label>Habitación</label>
+            <input type="radio" id="individual" name="habitacion" value="Individual">
+            <label for="individual">Individual</label>
+            <input type="radio" id="doble" name="habitacion" value="Doble">
+            <label for="doble">Doble</label>
+            <input type="radio" id="triple" name="habitacion" value="Triple">
+            <label for="triple">Triple</label>
+
+            <label for="personas">Número de personas</label>
+            <select id="personas" name="personas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            
+            <label for="mascotas">
+                <input type="checkbox" id="mascotas" name="mascotas"> Llevo mascotas
+            </label>
+            
+            <label for="fecha">Fecha de llegada</label>
+            <input type="date" id="fecha" name="fecha">
+            
+            <label for="hora">Hora de llegada</label>
+            <input type="time" id="hora" name="hora">
+        </fieldset>
+        <button type="submit">Enviar</button>
+        <button type="reset">Reiniciar</button>
+        <a href="index.html" class="link-back">Volver</a>
+    </form>
+</body>
+</html>
+
