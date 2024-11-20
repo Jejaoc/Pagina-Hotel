@@ -207,4 +207,26 @@ git checkout
     </form>
 </body>
 </html>
+<?php
+// Obtener datos del formulario
+$nombre = $_GET['nombre'];
+$apellidos = $_GET['apellidos'];
+$dni = $_GET['dni'];
+$habitacion = $_GET['habitacion'];
+$personas = $_GET['personas'];
+$mascotas = isset($_GET['mascotas']) ? "Sí" : "No";
+$fecha = $_GET['fecha'];
+$hora = $_GET['hora'];
+
+// Mostrar los datos (solo para prueba)
+echo "<h1>Reserva recibida</h1>";
+echo "<p>Nombre: $nombre</p>";
+echo "<p>Apellidos: $apellidos</p>";
+echo "<p>DNI: $dni</p>";
+echo "<p>Habitación: $habitacion</p>";
+echo "<p>Número de personas: $personas</p>";
+echo "<p>Lleva mascotas: $mascotas</p>";
+echo "<p>Fecha de llegada: $fecha</p>";
+echo "<p>Hora de llegada: $hora</p>";
+?>
 
