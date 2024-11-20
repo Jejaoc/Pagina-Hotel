@@ -1,4 +1,4 @@
-# Pagina-Hotel
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
