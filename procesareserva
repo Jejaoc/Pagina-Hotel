@@ -1,0 +1,13 @@
+<?php
+// Recibir los datos del formulario
+$nombre = $_GET['nombre'];
+$apellidos = $_GET['apellidos'];
+$dni = $_GET['dni'];
+$habitacion = $_GET['habitacion'];
+$personas = $_GET['personas'];
+$mascotas = isset($_GET['mascotas']) ? "Sí" : "No";
+$fecha = $_GET['fecha'];
+$hora = $_GET['hora'];
+
+// Mostrar los datos recibidos
+echo "<h1>Datos de la
